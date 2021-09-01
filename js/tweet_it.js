@@ -59,10 +59,11 @@ function login() {
 
 
     if (!!user && user.email === get_email && user.password === get_password) {
-        document.getElementById('login_content').classList.remove('d-flex');
-        document.getElementById('login_content').classList.add('d-none');
         document.getElementById('content').classList.add('d-flex');
         document.getElementById('content').classList.remove('d-none');
+        document.getElementById('login_content').classList.remove('d-flex');
+        document.getElementById('login_content').classList.add('d-none');
+
 
         document.getElementById('name').innerText = user.username;
         document.getElementById('name_et').innerText = '@' + user.username;
